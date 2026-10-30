@@ -6,16 +6,40 @@ const textoResultado = document.querySelector(".texto-resultado");
 
 const perguntas = [
     {
-    enunciado: "Pergunta 1",
+    enunciado:
+     "TheStone foi convidado para ir na casa de seu amigo Eulampio",
     alternativas: [
-        "Alternativas 1",
-        "Alternativas 2"]
+        "Voce foi!",
+        "Voce nao foi!"]
 },
 {
-    enunciado: "Pergunta 1",
+    enunciado: "TheStone nao concorda com a decisao dos amigos em abrir a caixa empoeirada",
     alternativas: [
-        "Alternativas 1",
-        "Alternativas 2"
+        "Eles decidem nao abrir",
+        "Eles fazem TheStone mudar de ideia "
     ]
-}
+},
+{
+    enunciado: "",
+    alternativas: [
+        "",
+        ""
+    ]
+},
+{
+    enunciado: "",
+    alternativas: [
+        "",
+        ""
+    ]
+},
+
     ];
+
+    let atual = 0;
+    let perguntaAtual;
+
+    function mostraPerguntas() {
+        perguntaAtual = perguntas[atual];
+        caixaPerguntas.textContent = perguntaAtual.enunciado;
+    }
